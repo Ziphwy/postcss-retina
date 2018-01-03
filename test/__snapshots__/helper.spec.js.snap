@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createMediaQuery() 1`] = `
+"
+/* 设备像素比为 3 */
+@media only screen and (-webkit-min-device-pixel-ratio: 3), 
+only screen and (min-device-pixel-ratio: 3) {
+  class1::before, class2::before, class3::before {
+    transform: scale(0.333333);
+    transform-origin: 0 0;
+    width: 300%;
+    height: 300%;
+    font-size: 300px;
+  }
+}"
+`;
+
+exports[`createMediaQuery(empty) 1`] = `""`;
+
+exports[`createPseudoElement() 1`] = `
+"
+class1, class2, class3 {
+  position: relative;
+}
+ 
+class1::before, class2::before, class3::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  font-size: 100px;
+}"
+`;
+
+exports[`createPseudoElement(empty) 1`] = `""`;
+
+exports[`getPseudoSelector() 1`] = `"class1::before, class2::before, class3::before"`;
+
+exports[`unique() 1`] = `
+Array [
+  "class1",
+  "class2",
+  "class3",
+]
+`;

@@ -1,0 +1,42 @@
+{
+  "name": "postcss-retina",
+  "version": "0.0.0",
+  "description": "PostCSS plugin for create 1px border by scale-box on mobile",
+  "main": "./lib/index.js",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "1px border",
+    "retina"
+  ],
+  "author": "ziphwy <ziphwy@gmail.com>",
+  "license": "MIT",
+  "repository": "ziphwy/postcss-retina",
+  "bugs": {
+    "url": "https://github.com/ziphwy/postcss-retina/issues"
+  },
+  "homepage": "https://github.com/ziphwy/postcss-retina",
+  "dependencies": {
+    "postcss": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.0.0",
+    "babel-eslint": "^8.1.2",
+    "eslint": "^3.19.0",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^20.0.0"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js",
+    "jest-update": "jest -u",
+    "jest-coverage": "jest --coverage"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss",
+    "parser": "babel-eslint",
+    "env": {
+      "jest": true
+    }
+  }
+}

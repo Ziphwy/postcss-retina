@@ -1,0 +1,14 @@
+.test:hover {
+  color: red;
+  border: 1px solid red;
+}
+
+.test::before {
+  color: red;
+  border: 1px solid red;
+}
+
+.test::after {
+  color: red;
+  border: 1px solid red;
+}

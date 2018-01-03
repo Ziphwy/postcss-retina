@@ -1,0 +1,11 @@
+.test1 {
+  color: red;
+}
+
+.test2 {
+  border: 1em red solid;
+}
+
+.test2 {
+  border-style: solid;
+}

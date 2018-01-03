@@ -1,0 +1,39 @@
+.test1 {
+  color: red;
+  border: 1px solid red;
+}
+
+.test11 {
+  color: red;
+  border-width: 1px;
+}
+
+.image {
+  color: red;
+  border-image: 1px solid red;
+}
+
+.left {
+  color: red;
+  border-left: 1px solid red;
+}
+
+.left1 {
+  color: red;
+  border-left-width: 1px;
+}
+
+.right {
+  color: red;
+  border-right: 1px solid red;
+}
+
+.top {
+  color: red;
+  border-top: 1px solid red;
+}
+
+.bottom {
+  color: red;
+  border-bottom: 1px solid red;
+}

@@ -1,0 +1,16 @@
+.test1 {
+  color: red;
+  border: 1px solid red;
+  border-radius: 1px solid red;
+}
+
+.test2 {
+  color: red;
+  border-radius: 1px;
+}
+
+.test3 {
+  color: red;
+  border: 1px solid red;
+  border-radius: 10px 5px 2em / 20px 25px 30%;
+}

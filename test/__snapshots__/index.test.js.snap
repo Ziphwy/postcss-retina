@@ -1,0 +1,484 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`do not transform border with pseudo 1`] = `
+".test:hover {
+  color: red;
+}
+
+.test::before {
+  color: red;
+}
+
+.test::after {
+  color: red;
+}
+
+.test:hover::before {
+  border: 1px solid red;
+}
+
+.test:hover {
+  position: relative;
+}
+
+.test:hover::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  font-size: 100px;
+}
+
+/* 设备像素比为 2 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+  .test:hover::before {
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    font-size: 200px;
+  }
+}
+
+/* 设备像素比为 3 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3), 
+only screen and (min-device-pixel-ratio: 3) {
+  .test:hover::before {
+    transform: scale(0.333333);
+    transform-origin: 0 0;
+    width: 300%;
+    height: 300%;
+    font-size: 300px;
+  }
+}
+
+/* 设备像素比为 4 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 4), 
+only screen and (min-device-pixel-ratio: 4) {
+  .test:hover::before {
+    transform: scale(0.25);
+    transform-origin: 0 0;
+    width: 400%;
+    height: 400%;
+    font-size: 400px;
+  }
+}"
+`;
+
+exports[`no border decl or border-width unit is not "px"  1`] = `
+".test1 {
+  color: red;
+}
+
+.test2 {
+  border: 1em red solid;
+}
+
+.test2 {
+  border-style: solid;
+}"
+`;
+
+exports[`transform border normally 1`] = `
+".test1 {
+  color: red;
+}
+
+.test11 {
+  color: red;
+}
+
+.image {
+  color: red;
+}
+
+.left {
+  color: red;
+}
+
+.left1 {
+  color: red;
+}
+
+.right {
+  color: red;
+}
+
+.top {
+  color: red;
+}
+
+.bottom {
+  color: red;
+}
+
+.test1::before {
+  border: 1px solid red;
+}
+
+.test11::before {
+  border-width: 1px;
+}
+
+.image::before {
+  border-image: 1px solid red;
+}
+
+.left::before {
+  border-left: 1px solid red;
+}
+
+.left1::before {
+  border-left-width: 1px;
+}
+
+.right::before {
+  border-right: 1px solid red;
+}
+
+.top::before {
+  border-top: 1px solid red;
+}
+
+.bottom::before {
+  border-bottom: 1px solid red;
+}
+
+.test1, .test11, .image, .left, .left1, .right, .top, .bottom {
+  position: relative;
+}
+
+.test1::before, .test11::before, .image::before, .left::before, .left1::before, .right::before, .top::before, .bottom::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  font-size: 100px;
+}
+
+/* 设备像素比为 2 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+  .test1::before, .test11::before, .image::before, .left::before, .left1::before, .right::before, .top::before, .bottom::before {
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    font-size: 200px;
+  }
+}
+
+/* 设备像素比为 3 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3), 
+only screen and (min-device-pixel-ratio: 3) {
+  .test1::before, .test11::before, .image::before, .left::before, .left1::before, .right::before, .top::before, .bottom::before {
+    transform: scale(0.333333);
+    transform-origin: 0 0;
+    width: 300%;
+    height: 300%;
+    font-size: 300px;
+  }
+}
+
+/* 设备像素比为 4 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 4), 
+only screen and (min-device-pixel-ratio: 4) {
+  .test1::before, .test11::before, .image::before, .left::before, .left1::before, .right::before, .top::before, .bottom::before {
+    transform: scale(0.25);
+    transform-origin: 0 0;
+    width: 400%;
+    height: 400%;
+    font-size: 400px;
+  }
+}"
+`;
+
+exports[`transform border normally width opt 3 1`] = `
+".test1 {
+  color: red;
+}
+
+.test11 {
+  color: red;
+}
+
+.image {
+  color: red;
+}
+
+.left {
+  color: red;
+}
+
+.left1 {
+  color: red;
+}
+
+.right {
+  color: red;
+}
+
+.top {
+  color: red;
+}
+
+.bottom {
+  color: red;
+}
+
+.test1::before {
+  border: 1px solid red;
+}
+
+.test11::before {
+  border-width: 1px;
+}
+
+.image::before {
+  border-image: 1px solid red;
+}
+
+.left::before {
+  border-left: 1px solid red;
+}
+
+.left1::before {
+  border-left-width: 1px;
+}
+
+.right::before {
+  border-right: 1px solid red;
+}
+
+.top::before {
+  border-top: 1px solid red;
+}
+
+.bottom::before {
+  border-bottom: 1px solid red;
+}
+
+.test1, .test11, .image, .left, .left1, .right, .top, .bottom {
+  position: relative;
+}
+
+.test1::before, .test11::before, .image::before, .left::before, .left1::before, .right::before, .top::before, .bottom::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  font-size: 100px;
+}
+
+/* 设备像素比为 2 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+  .test1::before, .test11::before, .image::before, .left::before, .left1::before, .right::before, .top::before, .bottom::before {
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    font-size: 200px;
+  }
+}
+
+/* 设备像素比为 3 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3), 
+only screen and (min-device-pixel-ratio: 3) {
+  .test1::before, .test11::before, .image::before, .left::before, .left1::before, .right::before, .top::before, .bottom::before {
+    transform: scale(0.333333);
+    transform-origin: 0 0;
+    width: 300%;
+    height: 300%;
+    font-size: 300px;
+  }
+}
+
+/* 设备像素比为 4 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 4), 
+only screen and (min-device-pixel-ratio: 4) {
+  .test1::before, .test11::before, .image::before, .left::before, .left1::before, .right::before, .top::before, .bottom::before {
+    transform: scale(0.25);
+    transform-origin: 0 0;
+    width: 400%;
+    height: 400%;
+    font-size: 400px;
+  }
+}"
+`;
+
+exports[`transform border with border-radius 1`] = `
+".test1 {
+  color: red;
+  border-radius: 1px solid red;
+}
+
+.test2 {
+  color: red;
+  border-radius: 1px;
+}
+
+.test3 {
+  color: red;
+  border-radius: 10px 5px 2em / 20px 25px 30%;
+}
+
+.test1::before {
+  border: 1px solid red;
+  border-radius: 0.01em solid red;
+}
+
+.test3::before {
+  border: 1px solid red;
+  border-radius: 0.1em 0.05em 2em / 0.2em 0.25em 30%;
+}
+
+.test1, .test3 {
+  position: relative;
+}
+
+.test1::before, .test3::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  font-size: 100px;
+}
+
+/* 设备像素比为 2 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+  .test1::before, .test3::before {
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    font-size: 200px;
+  }
+}
+
+/* 设备像素比为 3 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3), 
+only screen and (min-device-pixel-ratio: 3) {
+  .test1::before, .test3::before {
+    transform: scale(0.333333);
+    transform-origin: 0 0;
+    width: 300%;
+    height: 300%;
+    font-size: 300px;
+  }
+}
+
+/* 设备像素比为 4 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 4), 
+only screen and (min-device-pixel-ratio: 4) {
+  .test1::before, .test3::before {
+    transform: scale(0.25);
+    transform-origin: 0 0;
+    width: 400%;
+    height: 400%;
+    font-size: 400px;
+  }
+}
+"
+`;
+
+exports[`transform border with repeat class 1`] = `
+".test {
+}
+
+.test {
+}
+
+.test::before {
+  border: 1px solid red;
+}
+
+.test::before {
+  border: 1px solid red;
+}
+
+.test {
+  position: relative;
+}
+
+.test::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  font-size: 100px;
+}
+
+/* 设备像素比为 2 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+  .test::before {
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    font-size: 200px;
+  }
+}
+
+/* 设备像素比为 3 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3), 
+only screen and (min-device-pixel-ratio: 3) {
+  .test::before {
+    transform: scale(0.333333);
+    transform-origin: 0 0;
+    width: 300%;
+    height: 300%;
+    font-size: 300px;
+  }
+}
+
+/* 设备像素比为 4 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 4), 
+only screen and (min-device-pixel-ratio: 4) {
+  .test::before {
+    transform: scale(0.25);
+    transform-origin: 0 0;
+    width: 400%;
+    height: 400%;
+    font-size: 400px;
+  }
+}"
+`;
