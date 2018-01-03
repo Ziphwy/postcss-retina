@@ -2,6 +2,10 @@
 
 [PostCSS] plugin for create 1px border by scale-box on mobile.
 
+![](./example/example.png)  
+[example](https://rawgit.com/Ziphwy/postcss-retina/master/example/index.html)
+
+
 It's compatible for all type of border.
 
 [PostCSS]: https://github.com/postcss/postcss
