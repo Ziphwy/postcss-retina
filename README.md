@@ -1,25 +1,29 @@
 # PostCSS Retina [![Build Status][ci-img]][ci]
 transform your border in retina without change anything.
 
-# How It Works
-use a ```::before``` element to create a scale border and replace the origin .
+## How It Works
+use a **```::before```** element to create a scale border and replace the origin.
 
 
-# Example
+## Example
 [a simple page to show the document structure](https://rawgit.com/Ziphwy/postcss-retina/master/example/index.html)  
 
 ![](./example/example.png)  
 
 [PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/ziphwy/postcss-retina.svg
-[ci]:      https://travis-ci.org/ziphwy/postcss-retina
+[ci-img]:  https://travis-ci.org/Ziphwy/postcss-retina.svg
+[ci]:      https://travis-ci.org/Ziphwy/postcss-retina
+
+before:
 
 ```css
 .foo {
   color: white;
   border: 1px solid red;
 }
-```
+```  
+
+after:
 
 ```css
 .foo {
@@ -73,7 +77,7 @@ only screen and (min-device-pixel-ratio: 3) {
 }
 ```
 
-# Install
+## Install
 ```
 npm install --save-dev postcss-retina
 ```
@@ -84,9 +88,9 @@ npm install --save-dev postcss-retina
 postcss([ require('postcss-retina') ])
 ```
 
-* make sure your box is not a pseudo-class
-* make sure your box use **px** unit
-* border-radius will be not to transform without border in same brace
+* make sure your box is not a pseudo-class.
+* make sure your **```border```** and **```border-radius```** use **```px```** unit.
+* **```border-radius```** will be not to transform without border in same brace.
 * if your don't need transform any border, try to do like: 
 
 ```css

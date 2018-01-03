@@ -12,11 +12,11 @@
   ],
   "author": "ziphwy <ziphwy@gmail.com>",
   "license": "MIT",
-  "repository": "ziphwy/postcss-retina",
+  "repository": "Ziphwy/postcss-retina",
   "bugs": {
-    "url": "https://github.com/ziphwy/postcss-retina/issues"
+    "url": "https://github.com/Ziphwy/postcss-retina/issues"
   },
-  "homepage": "https://github.com/ziphwy/postcss-retina",
+  "homepage": "https://github.com/Ziphwy/postcss-retina",
   "dependencies": {
     "postcss": "^6.0.1"
   },
