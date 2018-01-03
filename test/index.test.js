@@ -46,3 +46,8 @@ it('transform border with repeat class', async () => {
     const input = await readFile('./case/repeat-class.css');
     run(input);
 });
+
+it('declare it is not require to transform', async () => {
+    const input = await readFile('./case/no-need.css');
+    run(input);
+});

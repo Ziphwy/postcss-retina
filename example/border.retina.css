@@ -1,0 +1,104 @@
+.parent {
+  border: 1px solid red; /*no*/
+  padding: 10px;
+  text-align: center;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: #ffe8e8;  
+  display: inline-block;
+}
+
+.foo {
+  border-radius: 10px;
+}
+
+.left {
+}
+
+.right {
+}
+
+.top {
+}
+
+.bottom {
+}
+
+.foo::before {
+  border: 1px solid red;
+  border-radius: 0.1em;
+}
+
+.left::before {
+  border-left: 1px solid red;
+}
+
+.right::before {
+  border-right: 1px solid red;
+}
+
+.top::before {
+  border-top: 1px solid red;
+}
+
+.bottom::before {
+  border-bottom: 1px solid red;
+}
+
+.foo, .left, .right, .top, .bottom {
+  position: relative;
+}
+
+.foo::before, .left::before, .right::before, .top::before, .bottom::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  font-size: 100px;
+}
+
+/* dpr is 2 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+  .foo::before, .left::before, .right::before, .top::before, .bottom::before {
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    font-size: 200px;
+  }
+}
+
+/* dpr is 3 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3), 
+only screen and (min-device-pixel-ratio: 3) {
+  .foo::before, .left::before, .right::before, .top::before, .bottom::before {
+    transform: scale(0.333333);
+    transform-origin: 0 0;
+    width: 300%;
+    height: 300%;
+    font-size: 300px;
+  }
+}
+
+/* dpr is 4 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 4), 
+only screen and (min-device-pixel-ratio: 4) {
+  .foo::before, .left::before, .right::before, .top::before, .bottom::before {
+    transform: scale(0.25);
+    transform-origin: 0 0;
+    width: 400%;
+    height: 400%;
+    font-size: 400px;
+  }
+}

@@ -6,7 +6,7 @@ const {
 } = require('../lib/helper');
 
 it('getPseudoSelector()', () => {
-    expect(getPseudoSelector(['class1', 'class2', 'class3'])).toEqual([1, 2, 3]);// .toMatchSnapshot();
+    expect(getPseudoSelector(['class1', 'class2', 'class3'])).toMatchSnapshot();
 });
 
 it('createMediaQuery()', () => {

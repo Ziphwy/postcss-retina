@@ -2,6 +2,8 @@
 
 [PostCSS] plugin for create 1px border by scale-box on mobile.
 
+It's compatible for all type of border.
+
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/ziphwy/postcss-retina.svg
 [ci]:      https://travis-ci.org/ziphwy/postcss-retina
@@ -38,7 +40,7 @@
   font-size: 100px;
 }
 
-/* 设备像素比为 2 */
+/* dpr is 2 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), 
 only screen and (min-device-pixel-ratio: 2) {
@@ -51,7 +53,7 @@ only screen and (min-device-pixel-ratio: 2) {
   }
 }
 
-/* 设备像素比为 3 */
+/* dpr is 3 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 3), 
 only screen and (min-device-pixel-ratio: 3) {
@@ -70,5 +72,16 @@ only screen and (min-device-pixel-ratio: 3) {
 ```js
 postcss([ require('postcss-retina') ])
 ```
+
+* make sure your box is not a pseudo-class
+* make sure your box use **px** unit
+* border-radius will be not to transform without border in same brace
+* if your don't need transform any border, try to do like: 
+
+  ```css
+  .foo {  
+    border: 1px solid red; /*no*/ 
+  }
+  ```
 
 See [PostCSS] docs for examples for your environment.

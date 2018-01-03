@@ -1,0 +1,33 @@
+.parent {
+  border: 1px solid red; /*no*/
+  padding: 10px;
+  text-align: center;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: #ffe8e8;  
+  display: inline-block;
+}
+
+.foo {
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+.left {
+  border-left: 1px solid red;
+}
+
+.right {
+  border-right: 1px solid red;
+}
+
+.top {
+  border-top: 1px solid red;
+}
+
+.bottom {
+  border-bottom: 1px solid red;
+}

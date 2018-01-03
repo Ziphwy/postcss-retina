@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`declare it is not require to transform 1`] = `
+".foo {  
+  border: 1px solid red; /*no*/ 
+}"
+`;
+
 exports[`do not transform border with pseudo 1`] = `
 ".test:hover {
   color: red;
@@ -33,7 +39,7 @@ exports[`do not transform border with pseudo 1`] = `
   font-size: 100px;
 }
 
-/* 设备像素比为 2 */
+/* dpr is 2 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), 
 only screen and (min-device-pixel-ratio: 2) {
@@ -46,7 +52,7 @@ only screen and (min-device-pixel-ratio: 2) {
   }
 }
 
-/* 设备像素比为 3 */
+/* dpr is 3 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 3), 
 only screen and (min-device-pixel-ratio: 3) {
@@ -59,7 +65,7 @@ only screen and (min-device-pixel-ratio: 3) {
   }
 }
 
-/* 设备像素比为 4 */
+/* dpr is 4 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 4), 
 only screen and (min-device-pixel-ratio: 4) {
@@ -168,7 +174,7 @@ exports[`transform border normally 1`] = `
   font-size: 100px;
 }
 
-/* 设备像素比为 2 */
+/* dpr is 2 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), 
 only screen and (min-device-pixel-ratio: 2) {
@@ -181,7 +187,7 @@ only screen and (min-device-pixel-ratio: 2) {
   }
 }
 
-/* 设备像素比为 3 */
+/* dpr is 3 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 3), 
 only screen and (min-device-pixel-ratio: 3) {
@@ -194,7 +200,7 @@ only screen and (min-device-pixel-ratio: 3) {
   }
 }
 
-/* 设备像素比为 4 */
+/* dpr is 4 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 4), 
 only screen and (min-device-pixel-ratio: 4) {
@@ -289,7 +295,7 @@ exports[`transform border normally width opt 3 1`] = `
   font-size: 100px;
 }
 
-/* 设备像素比为 2 */
+/* dpr is 2 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), 
 only screen and (min-device-pixel-ratio: 2) {
@@ -302,7 +308,7 @@ only screen and (min-device-pixel-ratio: 2) {
   }
 }
 
-/* 设备像素比为 3 */
+/* dpr is 3 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 3), 
 only screen and (min-device-pixel-ratio: 3) {
@@ -315,7 +321,7 @@ only screen and (min-device-pixel-ratio: 3) {
   }
 }
 
-/* 设备像素比为 4 */
+/* dpr is 4 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 4), 
 only screen and (min-device-pixel-ratio: 4) {
@@ -371,7 +377,7 @@ exports[`transform border with border-radius 1`] = `
   font-size: 100px;
 }
 
-/* 设备像素比为 2 */
+/* dpr is 2 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), 
 only screen and (min-device-pixel-ratio: 2) {
@@ -384,7 +390,7 @@ only screen and (min-device-pixel-ratio: 2) {
   }
 }
 
-/* 设备像素比为 3 */
+/* dpr is 3 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 3), 
 only screen and (min-device-pixel-ratio: 3) {
@@ -397,7 +403,7 @@ only screen and (min-device-pixel-ratio: 3) {
   }
 }
 
-/* 设备像素比为 4 */
+/* dpr is 4 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 4), 
 only screen and (min-device-pixel-ratio: 4) {
@@ -443,7 +449,7 @@ exports[`transform border with repeat class 1`] = `
   font-size: 100px;
 }
 
-/* 设备像素比为 2 */
+/* dpr is 2 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), 
 only screen and (min-device-pixel-ratio: 2) {
@@ -456,7 +462,7 @@ only screen and (min-device-pixel-ratio: 2) {
   }
 }
 
-/* 设备像素比为 3 */
+/* dpr is 3 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 3), 
 only screen and (min-device-pixel-ratio: 3) {
@@ -469,7 +475,7 @@ only screen and (min-device-pixel-ratio: 3) {
   }
 }
 
-/* 设备像素比为 4 */
+/* dpr is 4 */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 4), 
 only screen and (min-device-pixel-ratio: 4) {

@@ -2,7 +2,7 @@
 
 exports[`createMediaQuery() 1`] = `
 "
-/* 设备像素比为 3 */
+/* dpr is 3 */
 @media only screen and (-webkit-min-device-pixel-ratio: 3), 
 only screen and (min-device-pixel-ratio: 3) {
   class1::before, class2::before, class3::before {
