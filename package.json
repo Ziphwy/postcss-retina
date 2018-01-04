@@ -10,6 +10,12 @@
     "1px border",
     "retina"
   ],
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "files": [
+    "lib"
+  ],
   "author": "ziphwy <ziphwy@gmail.com>",
   "license": "MIT",
   "repository": "Ziphwy/postcss-retina",
