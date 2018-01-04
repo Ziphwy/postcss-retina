@@ -5,7 +5,7 @@
 
 * Automatically transform your border in retina without change anything.  
 * support border-radius and color.
-* it's easy to remove it to use other way such as [lib-flexible](https://github.com/amfe/lib-flexible)
+* it's easy to remove it to use other way such as [lib-flexible](https://github.com/amfe/lib-flexible)
 
 ## How It Works
 use a **```::before```** element to create a scale border and replace the origin.
@@ -20,8 +20,8 @@ use a **```::before```** element to create a scale border and replace the origin
 [ci-img]:  https://travis-ci.org/Ziphwy/postcss-retina.svg
 [ci]:      https://travis-ci.org/Ziphwy/postcss-retina
 
-[cover-img]: https://coveralls.io/github/Ziphwy/postcss-retina/badge.svg
-[cover]:     https://coveralls.io/github/Ziphwy/postcss-retina
+[cover-img]: https://coveralls.io/repos/github/Ziphwy/postcss-retina/badge.svg?branch=master
+[cover]:     https://coveralls.io/github/Ziphwy/postcss-retina?branch=master
 
 before:
 
