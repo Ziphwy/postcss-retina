@@ -1,13 +1,19 @@
 const postcss = require('postcss');
 const fs = require('fs');
 const path = require('path');
-const { promisify } = require('util');
 
 const plugin = require('../lib');
 
 
-const readFile = (filePath, ...args) =>
-    promisify(fs.readFile)(path.resolve(__dirname, filePath), ...args);
+const readFile = (filePath, ...args) => new Promise((resolve, reject) => {
+    fs.readFile(path.resolve(__dirname, filePath), ...args, (err, data) => {
+        if (err) {
+            reject();
+        } else {
+            resolve(data);
+        }
+    });
+});
 
 async function run(input, opts) {
     return postcss([plugin(opts)]).process(input)

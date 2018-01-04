@@ -21,22 +21,34 @@
     "postcss": "^6.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.36",
     "@types/jest": "^22.0.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.1.2",
+    "babel-jest": "^22.0.4",
+    "babel-preset-env": "^1.6.1",
+    "coveralls": "^3.0.0",
     "eslint": "^3.19.0",
     "eslint-config-postcss": "^2.0.2",
-    "jest": "^20.0.0"
+    "jest": "^22.0.4",
+    "regenerator-runtime": "^0.11.1"
   },
   "scripts": {
     "test": "jest && eslint *.js",
-    "jest-update": "jest -u",
-    "jest-coverage": "jest --coverage"
+    "test:update": "jest -u",
+    "coverage": "jest --coverage",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls"
   },
   "eslintConfig": {
     "extends": "eslint-config-postcss",
     "parser": "babel-eslint",
     "env": {
       "jest": true
+    }
+  },
+  "jest": {
+    "transform": {
+      "^.*\\.spec\\.js$": "babel-jest"
     }
   }
 }
