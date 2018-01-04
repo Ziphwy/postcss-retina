@@ -1,6 +1,6 @@
 {
   "name": "postcss-retina",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "PostCSS plugin for create 1px border by scale-box on mobile",
   "main": "./lib/index.js",
   "keywords": [
