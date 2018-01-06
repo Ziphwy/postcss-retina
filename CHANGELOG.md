@@ -1,2 +1,6 @@
 # Change Log
-This project adheres to [Semantic Versioning](http://semver.org/).
+v1.1.0
+* Feature: use comment **```/*retina*/```** to mark **```border-radius```** without **```border```** need to be transformed.
+
+v1.0.0
+* release

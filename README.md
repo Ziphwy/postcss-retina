@@ -99,7 +99,19 @@ postcss([ require('postcss-retina') ])
 
 * make sure your box is not a pseudo-class.
 * make sure your **```border```** and **```border-radius```** use **```px```** unit.
-* **```border-radius```** will be not to transform without border in same brace.
+* **```border-radius```** will be not to transform without border in same brace.  
+> In v1.1.0 you can comment **```/*retina*/```** to mark it transform.
+```css
+.foo {
+  border: 1px solid red;
+}
+.bar1 {
+  border-radius: 2px; /*retina*/
+}
+.bar2 {
+  border-radius: 4px; /*retina*/
+}
+```
 * if your don't need transform any border, try to do like: 
 
 ```css

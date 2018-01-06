@@ -14,3 +14,8 @@
   border: 1px solid red;
   border-radius: 10px 5px 2em / 20px 25px 30%;
 }
+
+.test4 {
+  color: red;
+  border-radius: 1px; /* retina */
+}

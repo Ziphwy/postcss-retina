@@ -351,6 +351,11 @@ exports[`transform border with border-radius 1`] = `
   border-radius: 10px 5px 2em / 20px 25px 30%;
 }
 
+.test4 {
+  color: red;
+  border-radius: 1px; /* retina */
+}
+
 .test1::before {
   border: 1px solid red;
   border-radius: 0.01em solid red;
@@ -361,11 +366,15 @@ exports[`transform border with border-radius 1`] = `
   border-radius: 0.1em 0.05em 2em / 0.2em 0.25em 30%;
 }
 
-.test1, .test3 {
+.test4::before {
+  border-radius: 0.01em;
+}
+
+.test1, .test3, .test4 {
   position: relative;
 }
 
-.test1::before, .test3::before {
+.test1::before, .test3::before, .test4::before {
   content: ' ';
   position: absolute;
   width: 100%;
@@ -381,7 +390,7 @@ exports[`transform border with border-radius 1`] = `
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), 
 only screen and (min-device-pixel-ratio: 2) {
-  .test1::before, .test3::before {
+  .test1::before, .test3::before, .test4::before {
     transform: scale(0.5);
     transform-origin: 0 0;
     width: 200%;
@@ -394,7 +403,7 @@ only screen and (min-device-pixel-ratio: 2) {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 3), 
 only screen and (min-device-pixel-ratio: 3) {
-  .test1::before, .test3::before {
+  .test1::before, .test3::before, .test4::before {
     transform: scale(0.333333);
     transform-origin: 0 0;
     width: 300%;
@@ -407,15 +416,14 @@ only screen and (min-device-pixel-ratio: 3) {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 4), 
 only screen and (min-device-pixel-ratio: 4) {
-  .test1::before, .test3::before {
+  .test1::before, .test3::before, .test4::before {
     transform: scale(0.25);
     transform-origin: 0 0;
     width: 400%;
     height: 400%;
     font-size: 400px;
   }
-}
-"
+}"
 `;
 
 exports[`transform border with repeat class 1`] = `
