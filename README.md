@@ -1,5 +1,5 @@
 # PostCSS Retina 
-[![Build Status][ci-img]][ci]  [![Coverage Status][cover-img]][cover]
+[![Build Status][ci-img]][ci]  [![Coverage Status][cover-img]][cover][![npm](https://img.shields.io/npm/dt/postcss-retina.svg)](https://www.npmjs.com/package/postcss-retina)
 
 [PostCSS] plugin for transform retina border by scale-box on mobile.
 
