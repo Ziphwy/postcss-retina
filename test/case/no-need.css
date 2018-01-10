@@ -1,3 +1,13 @@
 .foo {  
   border: 1px solid red; /*no*/ 
 }
+
+.foo1 {  
+  border: 1px solid red; /*no*/ 
+  border-radius: 5px;
+}
+
+.foo2 {  
+  border: 1px solid red; /*no*/ 
+  border-radius: 5px; /*retina*/
+}

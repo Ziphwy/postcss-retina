@@ -3,12 +3,78 @@
 exports[`declare it is not require to transform 1`] = `
 ".foo {  
   border: 1px solid red; /*no*/ 
+}
+
+.foo1 {  
+  border: 1px solid red; /*no*/ 
+  border-radius: 5px;
+}
+
+.foo2 {  
+  border: 1px solid red; /*no*/ 
+  border-radius: 5px; /*retina*/ position: relative;
+}
+
+.foo2::before { 
+  border-radius: 0.05em; 
+}
+
+.foo2::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  font-size: 100px;
+}
+
+/* dpr is 2 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+  .foo2::before {
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    font-size: 200px;
+  }
+}
+
+/* dpr is 3 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3), 
+only screen and (min-device-pixel-ratio: 3) {
+  .foo2::before {
+    transform: scale(0.333333);
+    transform-origin: 0 0;
+    width: 300%;
+    height: 300%;
+    font-size: 300px;
+  }
+}
+
+/* dpr is 4 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 4), 
+only screen and (min-device-pixel-ratio: 4) {
+  .foo2::before {
+    transform: scale(0.25);
+    transform-origin: 0 0;
+    width: 400%;
+    height: 400%;
+    font-size: 400px;
+  }
 }"
 `;
 
 exports[`do not transform border with pseudo 1`] = `
 ".test:hover {
   color: red;
+  position: relative;
 }
 
 .test::before {
@@ -21,10 +87,6 @@ exports[`do not transform border with pseudo 1`] = `
 
 .test:hover::before {
   border: 1px solid red;
-}
-
-.test:hover {
-  position: relative;
 }
 
 .test:hover::before {
@@ -79,6 +141,92 @@ only screen and (min-device-pixel-ratio: 4) {
 }"
 `;
 
+exports[`keep position whose value is not static 1`] = `
+".test1 {
+  position: static;
+  position: relative;
+}
+
+.test2 {
+  position: relative;
+}
+
+.test3 {
+  position: absolute;
+}
+
+.test4 {
+  position: fixed;
+}
+
+.test1::before {
+  border: 1px solid red;
+}
+
+.test2::before {
+  border: 1px solid red;
+}
+
+.test3::before {
+  border: 1px solid red;
+}
+
+.test4::before {
+  border: 1px solid red;
+}
+
+.test1::before, .test2::before, .test3::before, .test4::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  font-size: 100px;
+}
+
+/* dpr is 2 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+  .test1::before, .test2::before, .test3::before, .test4::before {
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    width: 200%;
+    height: 200%;
+    font-size: 200px;
+  }
+}
+
+/* dpr is 3 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3), 
+only screen and (min-device-pixel-ratio: 3) {
+  .test1::before, .test2::before, .test3::before, .test4::before {
+    transform: scale(0.333333);
+    transform-origin: 0 0;
+    width: 300%;
+    height: 300%;
+    font-size: 300px;
+  }
+}
+
+/* dpr is 4 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 4), 
+only screen and (min-device-pixel-ratio: 4) {
+  .test1::before, .test2::before, .test3::before, .test4::before {
+    transform: scale(0.25);
+    transform-origin: 0 0;
+    width: 400%;
+    height: 400%;
+    font-size: 400px;
+  }
+}"
+`;
+
 exports[`no border decl or border-width unit is not "px"  1`] = `
 ".test1 {
   color: red;
@@ -96,34 +244,42 @@ exports[`no border decl or border-width unit is not "px"  1`] = `
 exports[`transform border normally 1`] = `
 ".test1 {
   color: red;
+  position: relative;
 }
 
 .test11 {
   color: red;
+  position: relative;
 }
 
 .image {
   color: red;
+  position: relative;
 }
 
 .left {
   color: red;
+  position: relative;
 }
 
 .left1 {
   color: red;
+  position: relative;
 }
 
 .right {
   color: red;
+  position: relative;
 }
 
 .top {
   color: red;
+  position: relative;
 }
 
 .bottom {
   color: red;
+  position: relative;
 }
 
 .test1::before {
@@ -156,10 +312,6 @@ exports[`transform border normally 1`] = `
 
 .bottom::before {
   border-bottom: 1px solid red;
-}
-
-.test1, .test11, .image, .left, .left1, .right, .top, .bottom {
-  position: relative;
 }
 
 .test1::before, .test11::before, .image::before, .left::before, .left1::before, .right::before, .top::before, .bottom::before {
@@ -217,34 +369,42 @@ only screen and (min-device-pixel-ratio: 4) {
 exports[`transform border normally width opt 3 1`] = `
 ".test1 {
   color: red;
+  position: relative;
 }
 
 .test11 {
   color: red;
+  position: relative;
 }
 
 .image {
   color: red;
+  position: relative;
 }
 
 .left {
   color: red;
+  position: relative;
 }
 
 .left1 {
   color: red;
+  position: relative;
 }
 
 .right {
   color: red;
+  position: relative;
 }
 
 .top {
   color: red;
+  position: relative;
 }
 
 .bottom {
   color: red;
+  position: relative;
 }
 
 .test1::before {
@@ -277,10 +437,6 @@ exports[`transform border normally width opt 3 1`] = `
 
 .bottom::before {
   border-bottom: 1px solid red;
-}
-
-.test1, .test11, .image, .left, .left1, .right, .top, .bottom {
-  position: relative;
 }
 
 .test1::before, .test11::before, .image::before, .left::before, .left1::before, .right::before, .top::before, .bottom::before {
@@ -339,6 +495,7 @@ exports[`transform border with border-radius 1`] = `
 ".test1 {
   color: red;
   border-radius: 1px solid red;
+  position: relative;
 }
 
 .test2 {
@@ -349,11 +506,12 @@ exports[`transform border with border-radius 1`] = `
 .test3 {
   color: red;
   border-radius: 10px 5px 2em / 20px 25px 30%;
+  position: relative;
 }
 
 .test4 {
   color: red;
-  border-radius: 1px; /* retina */
+  border-radius: 1px; /* retina */ position: relative;
 }
 
 .test1::before {
@@ -368,10 +526,6 @@ exports[`transform border with border-radius 1`] = `
 
 .test4::before {
   border-radius: 0.01em;
-}
-
-.test1, .test3, .test4 {
-  position: relative;
 }
 
 .test1::before, .test3::before, .test4::before {
@@ -428,21 +582,19 @@ only screen and (min-device-pixel-ratio: 4) {
 
 exports[`transform border with repeat class 1`] = `
 ".test {
-}
-
-.test {
-}
-
-.test::before {
-  border: 1px solid red;
-}
-
-.test::before {
-  border: 1px solid red;
+  position: relative;
 }
 
 .test {
   position: relative;
+}
+
+.test::before {
+  border: 1px solid red;
+}
+
+.test::before {
+  border: 1px solid red;
 }
 
 .test::before {

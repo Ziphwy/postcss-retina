@@ -37,14 +37,12 @@ after:
 ```css
 .foo {
   color: white;
+  /* in v1.2.0+ `position` will add/update at origin  */
+  position: relative; 
 }
 
 .foo::before {
   border: 1px solid red;
-}
-
-.foo::before {
-  position: relative;
 }
 
 .foo::before {
@@ -97,10 +95,53 @@ npm install --save-dev postcss-retina
 postcss([ require('postcss-retina') ])
 ```
 
+## Notice
+
 * make sure your box is not a pseudo-class.
+```css
+/* WILL NOT to be transformed */
+.wrong::before {
+  border: 1em;
+}
+/* WILL NOT to be transformed */
+.wrong::after {
+  border: 1em;
+}
+```
 * make sure your **```border```** and **```border-radius```** use **```px```** unit.
-* **```border-radius```** will not to be transformed without border in same brace.  
-> In v1.1.0 you can comment **```/*retina*/```** to mark it need to be transformed.
+```css
+/* WILL be transformed */
+.right {
+  border: 1px;
+}
+/* WILL NOT be transformed */
+.wrong {
+  border: 1em;
+}
+```
+
+* **```border-radius```** will not be transformed if there is not a border declare in same rule.  
+```css
+.foo {
+  border: 1px solid red;
+}
+.bar {
+  /* radius WILL NOT to be transformed */
+  border-radius: 2px;
+}
+```
+```css
+.foo {
+  border: 1px solid red;
+  /* radius WILL to be transformed */
+  border-radius: 2px;
+}
+```
+> In v1.1.0+ you can comment **```/*retina*/```** to mark it need to be transformed.
+```html
+<div class="foo bar1"><div>
+<div class="foo bar2"><div>
+```
 ```css
 .foo {
   border: 1px solid red;

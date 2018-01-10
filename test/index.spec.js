@@ -57,3 +57,8 @@ it('declare it is not require to transform', async () => {
     const input = await readFile('./case/no-need.css');
     run(input);
 });
+
+it('keep position whose value is not static', async () => {
+    const input = await readFile('./case/position.css');
+    run(input);
+});

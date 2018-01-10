@@ -11,25 +11,25 @@ it('getPseudoSelector()', () => {
 
 it('createMediaQuery()', () => {
     expect(createMediaQuery(['class1', 'class2', 'class3'], 3))
-        .toMatchSnapshot();
+            .toMatchSnapshot();
 });
 
 it('createMediaQuery(empty)', () => {
     expect(createMediaQuery([], 3))
-        .toMatchSnapshot();
+            .toMatchSnapshot();
 });
 
 it('createPseudoElement()', () => {
     expect(createPseudoElement(['class1', 'class2', 'class3']))
-        .toMatchSnapshot();
+            .toMatchSnapshot();
 });
 
 it('createPseudoElement(empty)', () => {
     expect(createPseudoElement([]))
-        .toMatchSnapshot();
+            .toMatchSnapshot();
 });
 
 it('unique()', () => {
     expect(unique(['class1', 'class2', 'class1', 'class3']))
-        .toMatchSnapshot();
+            .toMatchSnapshot();
 });

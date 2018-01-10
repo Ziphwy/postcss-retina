@@ -13,18 +13,23 @@
 
 .foo {
   border-radius: 10px;
+  position: relative;
 }
 
 .left {
+  position: relative;
 }
 
 .right {
+  position: relative;
 }
 
 .top {
+  position: relative;
 }
 
 .bottom {
+  position: relative;
 }
 
 .foo::before {
@@ -46,10 +51,6 @@
 
 .bottom::before {
   border-bottom: 1px solid red;
-}
-
-.foo, .left, .right, .top, .bottom {
-  position: relative;
 }
 
 .foo::before, .left::before, .right::before, .top::before, .bottom::before {
